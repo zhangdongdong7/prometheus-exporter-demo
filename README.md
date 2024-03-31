@@ -65,6 +65,9 @@ Prometheus提供了客户端包github.com/prometheus/client_golang，通过它�
 ```
 
 （2）定义接口探测的Collector接口，实现Promethues Collector接口
+
 （3）实现Prometheus Collector接口的Describe和Collect方法
+
 （4）实现http和tcp检测方法
+
 （5）创建main方法，完成开发
