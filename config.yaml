@@ -1,0 +1,7 @@
+- url: "http://www.baidu.com"  
+  name: "百度测试"  
+  protocol: "http"
+  check_interval: 2s
+- url: "localhost:8080"  
+  name: "本地接口8080检测"  
+  protocol: "tcp"

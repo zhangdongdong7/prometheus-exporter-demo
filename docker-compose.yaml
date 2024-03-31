@@ -1,0 +1,17 @@
+version: '3.8'  
+services:  
+  haproxy:  
+    image: go-interface-health-check:v0.3  
+    container_name: interface-health-check  
+    network_mode: host  
+    restart: unless-stopped  
+    command: [ "go-interface-health-check","--config=/opt/config.yaml" ]  
+    volumes:  
+      - /u01/interface-health-check:/opt  
+      - /etc/localtime:/etc/localtime:ro  
+    user: root  
+    logging:  
+      driver: json-file  
+      options:  
+        max-size: 20m  
+        max-file: 100
